@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="form-title">Online Registration Form</div>
+    <form id="registration-form" method="POST" action="submit.php">
+      <div class="form-group">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" placeholder="Enter First Name" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname" placeholder="Enter Last Name" required>
+      </div>
+      
+      <div class="form-group">
+        <label>Gender</label>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter Email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter Phone Number" pattern="[0-9]{10}" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea id="address" name="address" placeholder="Enter Address" required></textarea>
+      </div>
+      
+      <div class="form-group">
+        <button type="submit" id="submit-btn">Submit</button>
+      </div>
+    </form>
+    
+    <div id="success-message" class="success-message" style="display:none;">
+      <h3>Form Submitted Successfully!</h3>
+      <p>Thank you for registering. Below is the information you provided:</p>
+      <div id="form-data"></div>
+    </div>
+  </div>
+</body>
+
+</html>
